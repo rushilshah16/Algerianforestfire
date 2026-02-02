@@ -5,8 +5,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
 # create flask app
-application = Flask(__name__)
-app=application
+app = Flask(__name__)
 
 # import ridge regressor and standard scaler pickle
 ridge_model=pickle.load(open('models/ridge.pkl','rb'))
@@ -51,4 +50,4 @@ def predict_datapoint():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
